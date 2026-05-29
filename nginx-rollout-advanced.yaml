@@ -83,19 +83,19 @@ spec:
           templates:
           - name: baseline
             specRef: stable
-            weight: 5
+            #weight: 5
           - name: canary
             specRef: canary
-            weight: 5
+            #weight: 5
       - pause: {}
       - experiment:
           duration: 5m
           templates:
           - name: baseline
             specRef: stable
-            weight: 10
+            #weight: 10
           - name: canary
             specRef: canary
-            weight: 10
+            #weight: 10
       - pause: {}
       - setWeight: 100
