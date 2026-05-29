@@ -67,7 +67,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.26.0
+        image: nginx:1.25.0
         ports:
         - containerPort: 80
   strategy:
@@ -79,7 +79,7 @@ spec:
           stableIngress: nginx-ingress
       steps:
       - experiment:
-          duration: 5m
+          #duration: 5m
           templates:
           - name: baseline
             specRef: stable
@@ -89,7 +89,7 @@ spec:
             #weight: 5
       - pause: {}
       - experiment:
-          duration: 5m
+          #duration: 5m
           templates:
           - name: baseline
             specRef: stable
